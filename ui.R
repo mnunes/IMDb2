@@ -1,20 +1,3 @@
-library(datasets)
-library(ggplot2)
-theme_set(theme_bw())
-library(dplyr)
-library(rvest)
-library(stringr)
-
-# function needed
-source("imdb.R")
-
-# tv series names
-source("list.R")
-
-lista <- cbind(Codigo=tvseries, Nome=tvseries.names)
-
-lista <- lista[order(lista[, 2]), ]
-
 # Use a fluid Bootstrap layout
 fluidPage(    
   

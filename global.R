@@ -1,3 +1,13 @@
+library(datasets)
+library(ggplot2)
+theme_set(theme_bw(base_size = 18))
+library(dplyr)
+library(rvest)
+library(stringr)
+
+# function to scrap and download data
+source("imdb.R")
+
 # tv series names
 source("list.R")
 

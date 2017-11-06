@@ -1,12 +1,3 @@
-library(datasets)
-library(ggplot2)
-theme_set(theme_bw())
-library(dplyr)
-library(rvest)
-library(stringr)
-
-source("imdb.R")
-
 # Define a server for the Shiny app
 function(input, output) {
   
