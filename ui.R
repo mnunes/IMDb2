@@ -26,7 +26,7 @@ fluidPage(
     # Define the sidebar with one input
     sidebarPanel(
       selectInput("TVSeries",
-                  choices=fooChoices,
+                  choices=tvChoices,
                   label="Escolha a Série:",
                   selected="tt0411008"), # Lost (2004)
       hr(),

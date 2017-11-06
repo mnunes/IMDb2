@@ -5,7 +5,7 @@ lista <- cbind(Codigo=tvseries, Nome=tvseries.names)
 
 lista <- lista[order(lista[, 2]), ]
 
-fooChoices <- c("24: Live Another Day (2014)"="tt1598754",
+tvChoices <- c("24: Live Another Day (2014)"="tt1598754",
                 "Adventure Time (2010)"="tt1305826",
                 "Africa (2013)"="tt2571774",
                 "Agatha Christie's Poirot (1989)"="tt0094525",
