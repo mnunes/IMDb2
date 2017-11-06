@@ -3,6 +3,7 @@ library(ggplot2)
 theme_set(theme_bw())
 library(dplyr)
 library(rvest)
+library(stringr)
 
 source("imdb.R")
 

@@ -42,7 +42,7 @@ imdb <- function(tvseries){
   
   rating$Sequence <- 1:length(rating$UserRating)
   
-  rating$Season <- as.character(rating$Season)
+  rating$Season <- factor(str_pad(rating$Season, 2, pad="0"))
   
   colnames(rating) <- c("Episode", "UserRating", "UserVotes", "Season", "Sequence")
   
