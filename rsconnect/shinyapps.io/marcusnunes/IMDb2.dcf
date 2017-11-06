@@ -1,0 +1,12 @@
+name: IMDb2
+title: IMDb2
+username:
+account: marcusnunes
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 232393
+bundleId: 1061127
+url: https://marcusnunes.shinyapps.io/IMDb2/
+when: 1509973662.68436
+asMultiple: FALSE
+asStatic: FALSE
