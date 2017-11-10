@@ -11,9 +11,7 @@ function(input, output) {
   
   output$Plot <- renderPlot({
     
-    dd <- ratings()
-    
-    g <- ggplot(dd, aes(x=Sequence, y=UserRating, colour=Season)) +
+    g <- ggplot(ratings(), aes(x=Sequence, y=UserRating, colour=Season)) +
       geom_point() +
       geom_smooth(method="loess", se=FALSE) +
       labs(x="Episódios", y="Rating", colour="Temporada") +
