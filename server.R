@@ -25,11 +25,12 @@ function(input, output) {
   
   ratings.table <- reactive({
     print(ratings()) %>%
-      select(Temporada=Season, Episódio=Episode, Nota=UserRating)
+      select(Temporada=Season, Episódio=Episode, Nota=UserRating) %>%
+      mutate(Temporada=as.numeric(Temporada), Nota=round(Nota, digits=1))
     
   })
   
-  output$Table <- renderTable(ratings.table(), striped=TRUE, hover=TRUE, align="c")
+  output$Table <- renderDataTable(ratings.table(), rownames=FALSE, filter="top", options=list(pageLength=50, digits=1))
 
   # output explicacao
   

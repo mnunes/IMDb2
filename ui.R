@@ -15,7 +15,7 @@ fluidPage(theme = shinytheme("spacelab"),
                   label="Escolha o Seriado:",
                   selected="tt0411008"), # Lost (2004)
       hr(),
-      helpText("As 250 melhores séries de acordo com os usuários do IMDb.")
+      helpText("As 250 melhores séries de TV de acordo com os usuários do IMDb.")
     ),
     
     # conteudo principal
@@ -26,7 +26,7 @@ fluidPage(theme = shinytheme("spacelab"),
         tabPanel("Plot", plotOutput("Plot")),
         
         # tabela
-        tabPanel("Tabela", tableOutput("Table"))#,
+        tabPanel("Tabela",  dataTableOutput("Table"))#,
         
         # explicacao
         #tabPanel("Explicação", verbatimTextOutput("Texto"))
