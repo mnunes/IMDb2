@@ -1,9 +1,9 @@
 # inspired by http://www.nathancunn.com/2017-10-26-simpsons-decline/
 
-# this function download and process data from tv series
+# this function download data from tv series
 
-imdb <- function(tvseries){
-
+download.imdb <- function(tvseries){
+  
   data <- read_html(paste0("https://www.imdb.com/title/", tvseries, "/epdate"))
   
   title0 <- html_nodes(data, "title")
@@ -49,6 +49,9 @@ imdb <- function(tvseries){
   rating <- as_data_frame(rating)
   
   return(rating)
-
+  
 }
-#imdb("tt0758745")
+
+# download.imdb("tt0285331")
+
+

@@ -3,9 +3,11 @@ theme_set(theme_bw(base_size = 18))
 library(dplyr)
 library(rvest)
 library(stringr)
+library(shinydashboard)
+library(shinythemes)
 
 # function to scrap and download data
-source("imdb.R")
+source("download.imdb.R")
 
 # tv series names
 source("list.R")
@@ -13,6 +15,8 @@ source("list.R")
 lista <- cbind(Codigo=tvseries, Nome=tvseries.names)
 
 lista <- lista[order(lista[, 2]), ]
+
+# tv series choices for the drop down menu
 
 tvChoices <- c("24: Live Another Day (2014)"="tt1598754",
                 "Adventure Time (2010)"="tt1305826",
@@ -264,3 +268,4 @@ tvChoices <- c("24: Live Another Day (2014)"="tt1598754",
                 "Yes, Prime Minister (1986)"="tt0086831",
                 "Young Justice (2010)"="tt1641384",
                 "Yu Yu Hakusho: Ghost Files (1992)"="tt0185133")
+

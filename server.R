@@ -1,10 +1,40 @@
-# Define a server for the Shiny app
+# define o servidor do shiny
 function(input, output) {
   
-  # Fill in the spot we created for a plot
+  # baixa os dados
+  
+  ratings <- reactive({
+    download.imdb(input$TVSeries)
+  })
+  
+  # output do plot
+  
   output$Plot <- renderPlot({
     
-    # plot the graph
-    imdb(input$TVSeries)
+    dd <- ratings()
+    
+    g <- ggplot(dd, aes(x=Sequence, y=UserRating, colour=Season)) +
+      geom_point() +
+      geom_smooth(method="loess", se=FALSE) +
+      labs(x="Episódios", y="Rating", colour="Temporada") +
+      theme(plot.title = element_text(hjust = 0.5))
+    
+    print(g)
+    
   })
+  
+  # output da tabela
+  
+  ratings.table <- reactive({
+    print(ratings()) %>%
+      select(Temporada=Season, Episódio=Episode, Nota=UserRating)
+    
+  })
+  
+  output$Table <- renderTable(ratings.table(), striped=TRUE, hover=TRUE, align="c")
+
+  # output explicacao
+  
+  #output$Texto <- h3(textOutput("Texto"))
+  
 }

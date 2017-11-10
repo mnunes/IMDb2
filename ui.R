@@ -1,25 +1,36 @@
-# Use a fluid Bootstrap layout
-fluidPage(    
+# usar um tema para a pagina,
+# baseado no bootstrap
+fluidPage(theme = shinytheme("spacelab"),
   
-  # Give the page a title
+  # titulo da pagina
   titlePanel("Histórico dos Ratings dos Seriados"),
   
-  # Generate a row with a sidebar
+  # coluna lateral
   sidebarLayout(
     
-    # Define the sidebar with one input
+    # definicao do sidebar
     sidebarPanel(
       selectInput("TVSeries",
                   choices=tvChoices,
-                  label="Escolha a Série:",
+                  label="Escolha o Seriado:",
                   selected="tt0411008"), # Lost (2004)
       hr(),
-      helpText("As 250 séries melhor avaliadas no IMDb.")
+      helpText("As 250 melhores séries de acordo com os usuários do IMDb.")
     ),
     
-    # Create a spot for the barplot
+    # conteudo principal
     mainPanel(
-      plotOutput("Plot")  
+      tabsetPanel(
+        
+        # grafico
+        tabPanel("Plot", plotOutput("Plot")),
+        
+        # tabela
+        tabPanel("Tabela", tableOutput("Table"))#,
+        
+        # explicacao
+        #tabPanel("Explicação", verbatimTextOutput("Texto"))
+      )
     )
     
   )
