@@ -14,7 +14,7 @@ function(input, output) {
     g <- ggplot(ratings(), aes(x=Sequence, y=UserRating, colour=Season)) +
       geom_point() +
       geom_smooth(method="loess", se=FALSE) +
-      labs(x="Episódios", y="Rating", colour="Temporada") +
+      labs(x="Episódios", y="Rating", title=tvseries.names[which(tvseries==input$TVSeries)], colour="Temporada") +
       theme(plot.title = element_text(hjust = 0.5))
     
     print(g)
