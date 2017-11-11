@@ -1,8 +1,10 @@
 library(ggplot2)
 theme_set(theme_bw(base_size = 18))
 library(dplyr)
+library(DT)
 library(rvest)
 library(stringr)
+library(shiny)
 library(shinydashboard)
 library(shinythemes)
 
