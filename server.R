@@ -25,8 +25,7 @@ function(input, output) {
   
   ratings.table <- reactive({
     print(ratings()) %>%
-      select(Temporada=Season, Episódio=Episode, Nota=UserRating) %>%
-      mutate(Temporada=as.numeric(Temporada), Nota=round(Nota, digits=1))
+      select(Temporada=Season, Episódio=Episode, Nota=UserRating)
     
   })
   
