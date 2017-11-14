@@ -29,7 +29,7 @@ fluidPage(theme = shinytheme("spacelab"),
         tabPanel("Tabela",  dataTableOutput("Table")),
         
         # explicacao
-        tabPanel("Explicação", htmlOutput("Texto"))
+        tabPanel("Sobre", includeMarkdown("sobre.md"))
       )
     )
     
