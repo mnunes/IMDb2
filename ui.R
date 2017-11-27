@@ -1,5 +1,5 @@
 # usar um tema para a pagina,
-# baseado no bootstrap
+# baseado no tema bootstrap
 fluidPage(theme = shinytheme("spacelab"),
   
   # titulo da pagina
