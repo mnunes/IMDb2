@@ -14,7 +14,7 @@ function(input, output) {
     g <- ggplot(ratings(), aes(x=Sequence, y=UserRating, colour=Season)) +
       geom_point() +
       geom_smooth(method="loess", se=FALSE) +
-      labs(x="Episódios", y="Nota dos Usuários", title=tvseries.names[which(tvseries==input$TVSeries)], colour="Temporada") +
+      labs(x="Episódios", y="Nota dos Usuários", title=lista$Nome[which(lista$Codigo==input$TVSeries)], colour="Temporada") +
       scale_y_continuous(limits=c(floor(min(ratings()$UserRating)), ceiling(max(ratings()$UserRating)))) +
       theme(plot.title = element_text(hjust = 0.5))
     
@@ -24,12 +24,12 @@ function(input, output) {
   
   # output da tabela
   
-  ratings.table <- reactive({
-    print(ratings()) %>%
-      select(Temporada=Season, Episódio=Episode, Nota=UserRating)
-    
-  })
+  #ratings.table <- reactive({
+  #  print(ratings()) %>%
+  #    select(Temporada=Season, Episódio=Episode, Nota=UserRating)
+  #  
+  #})
   
-  output$Table <- renderDataTable(ratings.table(), rownames=FALSE, filter="top", options=list(pageLength=50, digits=1))
+  #output$Table <- renderDataTable(ratings.table(), rownames=FALSE, filter="top", options=list(pageLength=50, digits=1))
   
 }

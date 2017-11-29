@@ -1,6 +1,9 @@
-# inspired by http://www.nathancunn.com/2017-10-26-simpsons-decline/
-
-# this function download data from tv series
+# inspirada por http://www.nathancunn.com/2017-10-26-simpsons-decline/
+#
+# funcao que extrai os ratings de uma determinada serie de TV
+# o argumento 'tvseries' eh o codigo da serie no IMDb
+# 
+# Marcus Nunes - http://marcusnunes.me
 
 download.imdb <- function(tvseries){
   
@@ -51,7 +54,3 @@ download.imdb <- function(tvseries){
   return(rating)
   
 }
-
-# download.imdb("tt0285331")
-
-
