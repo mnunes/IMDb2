@@ -15,7 +15,7 @@ fluidPage(theme = shinytheme("spacelab"),
                   label="Escolha o Seriado:",
                   selected="tt0411008"), # Lost (2004)
       hr(),
-      helpText("Visualização das informações temporais das 800 séries de TV com mais votos dados pelos usuários do IMDb. No meu acima, as séries estão classificadas de acordo com o número de votos recebidos.")
+      helpText("Visualização das informações temporais das 800 séries de TV com mais votos dados pelos usuários do IMDb. No menu acima, as séries estão classificadas de acordo com o número de votos recebidos.")
     ),
     
     # conteudo principal
