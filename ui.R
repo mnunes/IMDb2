@@ -26,7 +26,7 @@ fluidPage(theme = shinytheme("spacelab"),
         tabPanel("Plot", plotOutput("Plot")),
         
         # tabela
-        #tabPanel("Tabela",  dataTableOutput("Table")),
+        tabPanel("Tabela",  dataTableOutput("Table")),
         
         # explicacao
         tabPanel("Sobre", includeMarkdown("sobre.md"))
