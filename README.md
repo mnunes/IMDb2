@@ -1,9 +1,9 @@
 # IMDb2
 
-[My old IMDb project](https://github.com/mnunes/IMDb/) uses `bash`, `R` and `ggplot2` to make some cool TV Series plots using data available at IMDb. Unfortunately, it demanded a lot of work, even for more experienced programmers.
+[Meu antigo projeto com dados do IMDb](https://github.com/mnunes/IMDb/) utiliza `bash`, `R` and `ggplot2` para fazer alguns gráficos sobre séries de TV, usando dados disponibilizados pelo próprio IMDb. Entretanto, ele demanda um certo trabalho, até mesmo de programadores experientes.
 
-The goal of this project is to simplify the way these plots are made. Using packages like `rvest` and `dplyr`, one can automaticaly download and process IMDb data to use on `ggplot2` without even know what `R` is.
+O objetivo desta nova versão é simplificar ouso da ferramenta. Utilizando pacotes como `rvest` e `dplyr`, o usuário é capaz de baixar e processar automaticamente dados da sua série favorita, mesmo sem saber o que significa a linguagem de programação `R`.
 
-This application considers the [Top 250 TV Shows list](http://www.imdb.com/chart/toptv/) available at IMDb website.
+Este app considera todos as séries de TV presentes no IMBd que receberam ao menos 10.000 votos dos usuários do site.
 
-You can try this app live at [Shiny Apps](https://marcusnunes.shinyapps.io/IMDb2/).
+O aplicativo pode ser testado diretamente no [site da UFRN](http://shiny.estatitsitca.ufrn.ccet.br/IMDb2/).
