@@ -6,4 +6,8 @@ Tome, por exemplo, a página com as notas do seriado [Lost](http://www.imdb.com/
 
 <hr>
 
+O site deixou de funcionar devido a algumas mudanças no IMDb. O site está restringindo algumas informações para quem não possui uma conta pro.
+
+<hr>
+
 Produzido por [Marcus Nunes](http://marcusnunes.me). O código deste aplicativo pode ser encontrado no [github](https://github.com/mnunes/IMDb2/).
