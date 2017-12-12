@@ -7,3 +7,7 @@ O objetivo desta nova versão é simplificar ouso da ferramenta. Utilizando paco
 Este app considera todos as séries de TV presentes no IMBd que receberam ao menos 10.000 votos dos usuários do site.
 
 O aplicativo pode ser testado diretamente no [site da UFRN](http://shiny.estatitsitca.ufrn.ccet.br/IMDb2/).
+
+<hr>
+
+O site deixou de funcionar devido a algumas mudanças no IMDb. O site está restringindo algumas informações para quem não possui uma conta pro.
